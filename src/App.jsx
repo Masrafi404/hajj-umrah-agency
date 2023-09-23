@@ -4,6 +4,7 @@ import SpecialPackage from './Components/Home/SpecialPackage/SpecialPackage';
 import Offer from './Components/Home/Offer/Offer';
 import HajjUmrah from './Components/Home/HajjUmrah/HajjUmrah';
 import PersonPackage from './Components/Home/PersonPckage/PersonPackage';
+import Discount from './Components/Home/Discount/Discount';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Offer />
       <HajjUmrah />
       <PersonPackage />
+      <Discount />
     </>
   );
 };

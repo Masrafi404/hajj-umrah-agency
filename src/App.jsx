@@ -6,6 +6,7 @@ import HajjUmrah from './Components/Home/HajjUmrah/HajjUmrah';
 import PersonPackage from './Components/Home/PersonPckage/PersonPackage';
 import Discount from './Components/Home/Discount/Discount';
 import Blog from './Components/Home/Blog/Blog';
+import Footer from './Components/Home/Footer/Footer';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <PersonPackage />
       <Discount />
       <Blog />
+      <Footer />
     </>
   );
 };

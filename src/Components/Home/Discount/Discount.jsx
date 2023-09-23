@@ -2,7 +2,7 @@ import React from 'react';
 
 const Discount = () => {
     return (
-        <div className='bg-slate-200 py-3 mt-8'>
+        <div className='bg-slate-200 py-4 mt-8'>
             <div>
                 <div className='bg-yellow-500 mx-4 py-3 rounded-t-md'>
                     <h2 className='text-center'>Apply Now</h2>
@@ -20,7 +20,7 @@ const Discount = () => {
             </div>
             <div className='ms-6'>
                 <h4 className='uppercase text-[10px] font-medium text-yellow-400 mt-3'>apply</h4>
-                <h1 className='font-medium mt-1'>Apply your Hajj and Umrah</h1>
+                <h1 className='font-medium mt-1 text-lg'>Apply your Hajj and Umrah</h1>
                 <h1 className='font-medium'>and Get 10% Discount</h1>
                 <p className='text-sm mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <div className='space-y-2 mt-5 mb-1'>

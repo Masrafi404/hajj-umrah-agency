@@ -2,13 +2,13 @@ import React from 'react';
 
 const Discount = () => {
     return (
-        <div className='bg-slate-200 py-4 mt-8'>
+        <div className='bg-slate-200 py-8 mt-8 md:flex md:px-20 justify-evenly'>
             <div>
                 <div className='bg-yellow-500 mx-4 py-3 rounded-t-md'>
                     <h2 className='text-center'>Apply Now</h2>
                     <h1 className='text-center font-medium'>Up 10% Discount*</h1>
                 </div>
-                <div className='mx-4 pb-5 bg-white rounded-b-md'>
+                <div className='mx-4 pb-5 bg-white rounded-b-md md:px-20'>
                     <input className='mt-6 ps-3 text-[12px] border w-[90%] mx-4 rounded-2xl h-9' placeholder='First Name' type="text" name="" id="" />
                     <input className='mt-5 ps-3 text-[12px] border w-[90%] mx-4 rounded-2xl h-9' placeholder='Last Name' type="text" name="" id="" />
                     <input className='mt-5 ps-3 text-[12px] border w-[90%] mx-4 rounded-2xl h-9' placeholder='Email' type="text" name="" id="" />
@@ -18,7 +18,7 @@ const Discount = () => {
                     </div>
                 </div>
             </div>
-            <div className='ms-6'>
+            <div className='md:ms-20 ms-6 md:w-[60%]'>
                 <h4 className='uppercase text-[10px] font-medium text-yellow-400 mt-3'>apply</h4>
                 <h1 className='font-medium mt-1 text-lg'>Apply your Hajj and Umrah</h1>
                 <h1 className='font-medium'>and Get 10% Discount</h1>

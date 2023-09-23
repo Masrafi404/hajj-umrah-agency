@@ -5,12 +5,10 @@ import ReactStars from "react-rating-stars-component";
 const SpecialPackage = () => {
     return (
         <div className='w-[96%] mx-auto'>
-            <p className='uppercase font-semibold text-[.8rem] text-center text-yellow-400'>special offer</p>
-            <h1 className='text-center text-lg font-normal mb-2'>
-                Hajj and Umrah Special Offer
-            </h1>
+            <p className='uppercase font-semibold text-[.7rem] sm:text-[1rem] text-center text-yellow-400'>special offer</p>
+            <p className='font-bold md:text-[1.7rem] text-[1.5rem] sm:mx-4 text-center'>Solution for The Hajj and Umrah</p>
 
-            <div className='space-y-4'>
+            <div className='md:flex justify-center space-x-4 space-y-4 mt-3'>
                 <div className='border rounded'>
                     <img className='' src="image3.jpg" alt="" />
                     <h2 className='ms-2 mt-3 mb-2 text-lg font-[500]'>Umrah Package</h2>
@@ -21,7 +19,7 @@ const SpecialPackage = () => {
                                 <div>
                                     <div className=' ms-4 flex items-center space-x-10'>
                                         <div> <p className='uppercase text-[11px] font-semibold ms'>macca</p></div>
-                                        <div><p className='uppercase text-[11px]  font-semibold'>
+                                        <div><p className='uppercase text-[11px]  font-medium'>
                                             <ReactStars
                                                 count={5}
                                                 size={24} />
@@ -78,7 +76,7 @@ const SpecialPackage = () => {
                                 <div>
                                     <div className=' ms-4 flex items-center space-x-10'>
                                         <div> <p className='uppercase text-[11px] font-semibold ms'>macca</p></div>
-                                        <div><p className='uppercase text-[11px]  font-semibold'>
+                                        <div><p className='uppercase text-[11px]  font-medium'>
                                             <ReactStars
                                                 count={5}
                                                 size={24} />
@@ -135,7 +133,7 @@ const SpecialPackage = () => {
                                 <div>
                                     <div className=' ms-4 flex items-center space-x-10'>
                                         <div> <p className='uppercase text-[11px] font-semibold ms'>macca</p></div>
-                                        <div><p className='uppercase text-[11px]  font-semibold'>
+                                        <div><p className='uppercase text-[11px]  font-medium'>
                                             <ReactStars
                                                 count={5}
                                                 size={24} />

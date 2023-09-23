@@ -2,12 +2,12 @@ import React from 'react';
 
 const HajjUmrah = () => {
     return (
-        <div className='my-8'>
-            <img src="hajj-umrah.png" alt="" />
+        <div className='my-16 md:flex md:mx-20 justify-center items-center'>
+            <img className='md:me-20' src="hajj-umrah.png" alt="" />
             <div className='ms-4'>
                 <h3 className='text-[13px] uppercase font-medium text-yellow-300'>featured</h3>
                 <h1 className='text-xl font-medium my-2'>What Do We Offer?</h1>
-                <p className='text-sm mb-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p className='text-sm mb-3 me-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
 
                 <div className='space-y-3'>

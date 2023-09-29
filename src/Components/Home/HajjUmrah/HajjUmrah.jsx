@@ -6,7 +6,7 @@ const HajjUmrah = () => {
             <img className='md:me-20' src="hajj-umrah.png" alt="" />
             <div className='ms-4'>
                 <h3 className='text-[13px] uppercase font-medium text-yellow-300'>featured</h3>
-                <h1 className='text-xl font-medium my-2'>What Do We Offer?</h1>
+                <h1 className='text-xl font-medium my-2'>Hajj & Umrah Package</h1>
                 <p className='text-sm mb-3 me-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
 

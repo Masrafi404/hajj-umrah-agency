@@ -55,12 +55,12 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-yellow-400 py-2 px-2.5' onClick={handleToggle}>
+                <div className='bg-yellow-400 py-2 px-2.5'>
 
 
                     <ul className="text-black font-medium md:flex justify-evenly text-sm mx-30% py-3 hidden sm:flex mx-[30%]">
                         <li className="uppercase"><Link>home</Link></li>
-                        <li className="uppercase"><Link>about</Link></li>
+                        <li className="uppercase"><Link to="about">about</Link></li>
                         <li className="uppercase"><Link>package</Link></li>
                         <li className="uppercase"><Link>contact</Link></li>
                     </ul>
@@ -68,11 +68,11 @@ const Navbar = () => {
 
                     <span className='inline-block sm:hidden'>
                         {isOpen ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
+                            <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
+                            <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
                         )}
@@ -81,7 +81,7 @@ const Navbar = () => {
                 {isOpen && (
                     <ul className="text-black font-medium text-sm bg-white space-y-1 ps-3 py-2">
                         <li className="uppercase"><Link>home</Link></li>
-                        <li className="uppercase"><Link>about</Link></li>
+                        <li className="uppercase"><Link to="/about">about</Link></li>
                         <li className="uppercase"><Link>package</Link></li>
                         <li className="uppercase"><Link>contact</Link></li>
                     </ul>

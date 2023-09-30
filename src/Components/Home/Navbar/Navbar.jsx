@@ -30,7 +30,9 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <h1 className='text-center text-white text-4xl font-bold'>Al-Azwa</h1>
+                        <h1 className='text-center text-white md:text-4xl font-bold text-2xl'>Janani Travel Agency</h1>
+
+                        <h1 className='hidden md:inline-block text-center text-white text-2xl font-medium'>Government approved travel agent</h1>
                     </div>
                     <div className='md:flex md:items-center hidden'>
                         <button className="text-white text-lightBlue-400 shadow-lg font-normal h-8 w-8 items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">

@@ -9,11 +9,16 @@ const Footer = () => {
         <footer className="relative bg-black pt-8 pb-6">
             <div className="container mx-auto px-4">
                 <div className="flex flex-wrap text-left lg:text-left">
-                    <div className="w-full lg:w-6/12 px-4">
-                        <h4 className="text-3xl font-semibold text-white">Let's keep in touch!</h4>
-                        <h5 className="text-lg mt-0 mb-2 text-white">
-                            Find us on any of these platforms, we respond 1-2 business days.
+                    <div className="w-full lg:w-4/12 px-4">
+                        <h4 className="text-3xl font-semibold text-white mb-2">Let's keep in touch!</h4>
+                        <h5 className="text-bold mt-0 text-white">
+                            Head Office: B.K Tower, Lalcand Road. Cocbajar, Chtiagang
                         </h5>
+                        <p className=" text-white mb-3">First Security Islami Bank Ground Floor.</p>
+                        <h5 className="text-bold mt-0 text-white">
+                            Branch Office: Eden Garden City (Sonali Bank Ground Floor)
+                        </h5>
+                        <p className="mt-0 text-white">Cross Laldighi, Cox's Bazar Sadar.</p>
                         <div className="mt-6 lg:mb-0 mb-6">
                             <button className="bg-black text-yellow-300 border-yellow-300 border text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                 <i className="fa fa-twitter"></i>
@@ -31,9 +36,29 @@ const Footer = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="w-full lg:w-6/12 px-2">
+                    <div className="w-full lg:w-8/12 px-2">
                         <div className="flex flex-wrap items-top mb-6">
-                            <div className="w-full lg:w-4/12 px-4 ml-auto">
+                            <div className="w-full lg:w-3/12 px-4 ml-auto">
+                                <span className="block uppercase hover:text-yellow-300 text-white text-base font-semibold mb-2">Contact Info</span>
+                                <ul className="list-unstyled">
+                                    <li>
+                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm ">+8801811161863</a>
+                                    </li>
+                                    <li>
+                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">+8801976142447</a>
+                                    </li>
+                                    <li>
+                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">+8801976142440</a>
+                                    </li>
+                                    <li>
+                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block text-sm mb-3">jananitravelagency46@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">mdkokhan831974@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="w-full lg:w-3/12 px-4 ml-auto">
                                 <span className="block uppercase hover:text-yellow-300 text-white text-base font-semibold mb-2">Useful Links</span>
                                 <ul className="list-unstyled">
                                     <li>
@@ -50,7 +75,7 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="w-full lg:w-4/12 px-4">
+                            <div className="w-full lg:w-3/12 px-4">
                                 <span className="block uppercase hover:text-yellow-300 text-white text-base font-semibold mb-2">Other Resources</span>
                                 <ul className="list-unstyled">
                                     <li>
@@ -79,7 +104,7 @@ const Footer = () => {
                                     moment().format('YYYY')
                                 }
                             </span>
-                            <Link href="/" className="hover:text-yellow-300 ms-2">Al-Azwa</Link>
+                            <Link href="/" className="hover:text-yellow-300 ms-2">Janani Travel Agency</Link>
 
                         </div>
                     </div>

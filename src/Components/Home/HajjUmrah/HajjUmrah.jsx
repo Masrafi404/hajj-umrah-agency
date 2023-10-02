@@ -7,13 +7,13 @@ const HajjUmrah = () => {
             <div className='ms-4'>
                 <h3 className='text-[13px] uppercase font-medium text-yellow-300'>featured</h3>
                 <h1 className='text-xl font-medium my-2'>Hajj & Umrah Processing</h1>
-                <p className='text-sm mb-3 me-4'>Regularly you also join our Hajj and Umrah Groups.</p>
+                <p className='mb-3 me-4'>Regularly you also join our Hajj and Umrah Groups.</p>
 
 
                 <div className='space-y-3'>
                     <div className=''>
                         <div>
-                            <p className='text-[18px]'>Riyadul Islam Khokon</p>
+                            <p className='text-[18px]'>Redowanul Islam Khokan</p>
                             <div className='flex items-center'>
                                 <div className='me-2'>
                                     <i className="fa fa-phone" aria-hidden="true"></i>

@@ -14,7 +14,7 @@ const Offer = () => {
                             </svg>
                         </div>
                         <div>
-                            <p className='text-sm ms-[5px]'>All airlines ticket</p>
+                            <p className='text-[17px] ms-[5px]'>All airlines ticket</p>
                         </div>
                     </div>
                     <div className='flex items-center'>
@@ -24,7 +24,7 @@ const Offer = () => {
                             </svg>
                         </div>
                         <div>
-                            <p className='text-sm ms-[5px]'>Visa processing (saudi Aravia, India and Europe)</p>
+                            <p className='text-[17px] ms-[5px]'>Visa processing (saudi Aravia, India and Europe)</p>
                         </div>
                     </div>
                     <div className='flex items-center'>
@@ -34,7 +34,7 @@ const Offer = () => {
                             </svg>
                         </div>
                         <div>
-                            <p className='text-sm ms-[5px]'>
+                            <p className='text-[17px] ms-[5px]'>
                                 Student visa processing</p>
                         </div>
                     </div>
@@ -45,7 +45,7 @@ const Offer = () => {
                             </svg>
                         </div>
                         <div>
-                            <p className='text-sm ms-[5px]'>
+                            <p className='text-[17px] ms-[5px]'>
                                 Visit visa processing</p>
                         </div>
                     </div>
@@ -56,7 +56,7 @@ const Offer = () => {
                             </svg>
                         </div>
                         <div>
-                            <p className='text-sm ms-[5px]'>
+                            <p className='text-[17px] ms-[5px]'>
                                 Family visa processing</p>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ const Offer = () => {
                             </svg>
                         </div>
                         <div>
-                            <p className='text-sm ms-[5px]'>
+                            <p className='text-[17px] ms-[5px]'>
                                 passport online processing</p>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ const Offer = () => {
                             </svg>
                         </div>
                         <div>
-                            <p className='text-sm ms-[5px]'>
+                            <p className='text-[17px] ms-[5px]'>
                                 Manpower clearance</p>
                         </div>
                     </div>
@@ -89,7 +89,7 @@ const Offer = () => {
                 </div>
             </div>
             <div className='ms-[19%] hidden md:inline-block'>
-                <img className='h-[31.2rem] w-[40rem] pe-20' src="image6.jpg" alt="" />
+                <img className='h-[32.3rem] w-[40rem] pe-20' src="image6.jpg" alt="" />
             </div>
         </div>
     );

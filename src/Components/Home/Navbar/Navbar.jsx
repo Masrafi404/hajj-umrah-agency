@@ -1,14 +1,38 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [selectedLanguage, setSelectedLanguage] = useState('en');
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
     };
+
+    const googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+            {
+                pageLanguage: 'en',
+                autoDisplay: true,
+            },
+            'google_translate_element'
+        );
+    };
+
+    useEffect(() => {
+        var addScript = document.createElement('script');
+        addScript.setAttribute(
+            'src',
+            '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+        );
+        document.body.appendChild(addScript);
+        window.googleTranslateElementInit = googleTranslateElementInit;
+    }, []);
+
+
 
     return (
         <div className='relative'>
@@ -30,29 +54,15 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className=''>
+
                         <h1 className='text-center text-white md:text-4xl font-bold text-2xl'>Janani Travel Agency</h1>
 
                         <h1 className='hidden md:inline-block text-center text-white text-2xl font-medium'>Government approved travel agent</h1>
                     </div>
                     <div className='md:flex md:items-center hidden'>
-                        <button className="text-white text-lightBlue-400 shadow-lg font-normal h-8 w-8 items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">
-                            <i className="fa fa-twitter"></i>
-                        </button>
-                        <button className="text-white  shadow-lg font-normal h-8 w-8 items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">
-                            <i className="fa fa-facebook"></i>
-                        </button>
-                        <button className="text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">
-                            <i className="fa fa-instagram"></i>
-                        </button>
-                        <Link to="https://github.com/Masrafi404/hajj-umrah-agency">
-                            <button className="text-white shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">
-                                <i className="fa fa-github"></i>
-                            </button>
-                        </Link>
                         <div className='flex items-center ms-4'>
-                            <img src="bg1.png" className='w-6 h-6 rounded-full' alt="" />
-                            <div>
-                                <p className='text-white ms-1'>BD</p>
+                            <div id="google_translate_element">
+
                             </div>
                         </div>
                     </div>
@@ -93,21 +103,21 @@ const Navbar = () => {
             <Carousel className='text-center' showArrows={true}>
                 <div className='relative'>
                     <img src="image1.jpg" />
-                    <div className='absolute md:bottom-28 bottom-14 left-0 right-0 z-10 text-white'>
+                    <div className='absolute md:bottom-96 bottom-14 left-0 right-0 z-10 text-white'>
                         <p className='font-bold md:text-[1.7rem] text-[1.5rem] sm:mx-4'>Solution for The Hajj and Umrah</p>
                         <button className='uppercase text-[13px] text-black bg-yellow-300 px-5 py-3 rounded-3xl'>apply now</button>
                     </div>
                 </div>
                 <div className='relative'>
-                    <img src="image2.jpg" />
-                    <div className='absolute md:bottom-28 bottom-14 left-0 right-0 z-10 text-white'>
+                    <img src="image11.jpg" />
+                    <div className='absolute md:bottom-96 bottom-14 left-0 right-0 z-10 text-white'>
                         <p className='font-bold md:text-[1.7rem] text-[1.5rem] sm:mx-4'>Solution for The Hajj and Umrah</p>
                         <button className='uppercase text-[13px] text-black bg-yellow-300 px-5 py-3 rounded-3xl'>apply now</button>
                     </div>
                 </div>
                 <div className='relative'>
-                    <img src="image3.jpg" />
-                    <div className='absolute md:bottom-28 bottom-14 left-0 right-0 z-10 text-white'>
+                    <img src="image4.jpg" />
+                    <div className='absolute md:bottom-96 bottom-14 left-0 right-0 z-10 text-white'>
                         <p className='font-bold md:text-[1.7rem] text-[1.5rem] sm:mx-4'>Solution for The Hajj and Umrah</p>
                         <button className='uppercase text-[13px] text-black bg-yellow-300 px-5 py-3 rounded-3xl'>apply now</button>
                     </div>

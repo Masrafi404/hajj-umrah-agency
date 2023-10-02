@@ -5,3 +5,9 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+/* @media screen and (min-width: 600px) {
+    .translate-element {
+        display: none;
+    }
+} */

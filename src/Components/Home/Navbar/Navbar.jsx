@@ -69,33 +69,38 @@ const Navbar = () => {
                 </div>
                 <div className='bg-yellow-400 py-2 px-2.5'>
 
+                    <div>
+                        <ul className="text-black font-medium md:flex justify-evenly space-x-2 text-sm mx-30% py-3 hidden sm:flex mx-[30%]">
+                            <li className="uppercase "><Link>home</Link></li>
+                            <li className="uppercase "><Link to="about">about</Link></li>
+                            <li className="uppercase "><Link>package</Link></li>
+                            <li className="uppercase "><Link>contact</Link></li>
+                        </ul>
 
-                    <ul className="text-black font-medium md:flex justify-evenly text-sm mx-30% py-3 hidden sm:flex mx-[30%]">
-                        <li className="uppercase"><Link>home</Link></li>
-                        <li className="uppercase"><Link to="about">about</Link></li>
-                        <li className="uppercase"><Link>package</Link></li>
-                        <li className="uppercase"><Link>contact</Link></li>
-                    </ul>
+
+                        <span className='inline-block sm:hidden'>
+                            {isOpen ? (
+                                <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            )}
+
+                        </span>
+                    </div>
 
 
-                    <span className='inline-block sm:hidden'>
-                        {isOpen ? (
-                            <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        ) : (
-                            <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                            </svg>
-                        )}
-                    </span>
+
                 </div>
                 {isOpen && (
                     <ul className="text-black font-medium text-sm bg-white space-y-1 ps-3 py-2">
-                        <li className="uppercase"><Link>home</Link></li>
-                        <li className="uppercase"><Link to="/about">about</Link></li>
-                        <li className="uppercase"><Link>package</Link></li>
-                        <li className="uppercase"><Link>contact</Link></li>
+                        <li className="uppercase hover:text-yellow-400"><Link>home</Link></li>
+                        <li className="uppercase hover:text-yellow-400"><Link to="/about">about</Link></li>
+                        <li className="uppercase hover:text-yellow-400"><Link>package</Link></li>
+                        <li className="uppercase hover:text-yellow-400"><Link>contact</Link></li>
                     </ul>
                 )}
             </div>

@@ -4,7 +4,7 @@ import ReactStars from "react-rating-stars-component";
 
 const SpecialPackage = () => {
     return (
-        <div className='w-[96%] mx-auto'>
+        <div className='w-[96%] mx-auto mt-8'>
             <p className='uppercase font-semibold text-[.7rem] sm:text-[1rem] text-center text-yellow-400'>special offer</p>
             <p className='font-bold md:text-[1.7rem] text-[1.5rem] sm:mx-4 text-center'>Solution for The Hajj and Umrah</p>
 

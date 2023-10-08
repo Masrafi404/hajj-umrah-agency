@@ -1,12 +1,30 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedLanguage, setSelectedLanguage] = useState('en');
+    // const [selectedLanguage, setSelectedLanguage] = useState('en');
+
+    const { logOut, user } = useContext(AuthContext);
+    console.log(user?.photoURL)
+
+    const logOutHandler = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user);
+                toast.success('LogOut Success', {
+                    position: toast.POSITION.TOP_CENTER
+                })
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+            });
+    };
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
@@ -67,31 +85,56 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-yellow-400 py-2 px-2.5'>
+                <div className='bg-yellow-400'>
 
-                    <div>
-                        <ul className="text-black font-medium md:flex justify-evenly space-x-2 text-sm mx-30% py-3 hidden sm:flex mx-[30%]">
-                            <li className="uppercase "><Link>home</Link></li>
-                            <li className="uppercase "><Link to="about">about</Link></li>
-                            <li className="uppercase "><Link>package</Link></li>
-                            <li className="uppercase "><Link>contact</Link></li>
-                        </ul>
+                    <div className={user ? 'flex justify-between md:mx-4 items-center py-1' : 'flex justify-between md:mx-4 items-center py-4'}>
+                        <div>
+                            {user ? (
+                                user.photoURL ? (
+                                    <img title={user.displayName} className="w-16 h-16 rounded-full me-4 " src={user?.photoURL} alt="" />
+                                ) : (
+                                    <img title={user.displayName} className="w-12 h-10 rounded me-4" src="https://i.ibb.co/sKTQF8s/download.png" alt="" />
+                                )
+                            ) : null}
+                        </div>
+                        <div>
+                            <ul className="text-black mt-[0.60rem] mb-[6px] font-medium md:flex justify-evenly space-x-3 text-sm mx-30% hidden sm:flex mx-[30%]">
+                                <li className="uppercase "><Link>home</Link></li>
+                                <li className="uppercase "><Link to="about">about</Link></li>
+                                <li className="uppercase "><Link>package</Link></li>
+                                <li className="uppercase "><Link>contact</Link></li>
+                                <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
+                            </ul>
 
 
-                        <span className='inline-block sm:hidden'>
-                            {isOpen ? (
-                                <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
+                            <span className='inline-block sm:hidden'>
+                                {isOpen ? (
+                                    <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                ) : (
+                                    <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                )}
+
+                            </span>
+                        </div>
+                        <div className="hidden md:inline-block">
+
+                            {user ? (
+                                <Link onClick={logOutHandler} className=" bg-black rounded-[50px] px-4 py-2 text-white" to="/">
+                                    Log Out
+                                </Link>
                             ) : (
-                                <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                </svg>
+                                <>
+                                    <Link className=" bg-black rounded-[50px] px-4 py-2 text-white" to="/login">
+                                        Login
+                                    </Link>
+                                </>
                             )}
-
-                        </span>
+                        </div>
                     </div>
-
 
 
                 </div>
@@ -128,7 +171,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </Carousel>
-
+            <ToastContainer />
         </div>
     );
 };

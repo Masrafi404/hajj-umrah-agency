@@ -101,9 +101,11 @@ const About = () => {
                             <h3 className='text-[30px]'>Redowanul Islam Khokan.</h3>
                             <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit rem? Fugiat soluta esse eos tempora quia aspernatur! Omnis, quam.</p>
                             <div className='mt-2'>
-                                <button className="bg-black text-yellow-300 border-yellow-300 border-2 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                                    <i className="fa fa-facebook"></i>
-                                </button>
+                                <Link to="https://www.facebook.com/profile.php?id=100095284788408">
+                                    <button className="bg-black text-yellow-300 border-yellow-300 border-2 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                                        <i className="fa fa-facebook"></i>
+                                    </button>
+                                </Link>
 
                                 <button className="bg-black text-yellow-300 border-yellow-300 border-2 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                     <i className="fa fa-whatsapp"></i>

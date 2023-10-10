@@ -49,6 +49,14 @@ const SignUp = () => {
                 toast.success('SignUp Success', {
                     position: toast.POSITION.TOP_RIGHT
                 })
+
+                fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
                 console.log(user)
                 event.target.reset()
                 navigate('/')
@@ -67,6 +75,14 @@ const SignUp = () => {
                 toast.success('SignUp Success', {
                     position: toast.POSITION.TOP_RIGHT
                 })
+
+                fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
                 console.log(user)
                 navigate('/')
             })
@@ -82,6 +98,14 @@ const SignUp = () => {
                 const user = result.user
                 toast.success('SignUp Success', {
                     position: toast.POSITION.TOP_RIGHT
+                })
+
+                fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
                 })
                 console.log(user)
                 navigate('/')

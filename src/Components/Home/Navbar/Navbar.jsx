@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import { useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Link } from 'react-router-dom';
@@ -8,10 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    // const [selectedLanguage, setSelectedLanguage] = useState('en');
-
+    const [users, setUsers] = useState([]);
     const { logOut, user } = useContext(AuthContext);
-    console.log(user?.photoURL)
 
     const logOutHandler = () => {
         logOut()
@@ -19,7 +16,7 @@ const Navbar = () => {
                 console.log(result.user);
                 toast.success('LogOut Success', {
                     position: toast.POSITION.TOP_CENTER
-                })
+                });
             })
             .catch(error => {
                 const errorMessage = error.message;
@@ -48,10 +45,18 @@ const Navbar = () => {
         );
         document.body.appendChild(addScript);
         window.googleTranslateElementInit = googleTranslateElementInit;
-    }, []);
 
+        // Fetch user data here within the useEffect
+        fetch('http://localhost:3000/users')
+            .then((res) => res.json())
+            .then((data) => {
+                setUsers(data);
+            });
+    }, []); // Empty dependency array to ensure this effect runs only once
 
+    const currentUser = users.find(userData => userData?.email === user?.email);
 
+    console.log(currentUser)
     return (
         <div className='relative'>
             <div className='w-[94%] md:w-[65%] mx-auto fixed md:top-10 top-5 left-0 right-0 z-10'>
@@ -102,8 +107,9 @@ const Navbar = () => {
                                 <li className="uppercase "><Link>home</Link></li>
                                 <li className="uppercase "><Link to="about">about</Link></li>
                                 <li className="uppercase "><Link>package</Link></li>
-                                <li className="uppercase "><Link>contact</Link></li>
-                                <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
+                                {
+                                    currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
+                                }
                             </ul>
 
 
@@ -143,7 +149,9 @@ const Navbar = () => {
                         <li className="uppercase hover:text-yellow-400"><Link>home</Link></li>
                         <li className="uppercase hover:text-yellow-400"><Link to="/about">about</Link></li>
                         <li className="uppercase hover:text-yellow-400"><Link>package</Link></li>
-                        <li className="uppercase hover:text-yellow-400"><Link>contact</Link></li>
+                        {
+                            currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
+                        }
                     </ul>
                 )}
             </div>

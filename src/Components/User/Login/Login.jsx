@@ -30,6 +30,13 @@ const Login = () => {
                 toast.success('Login Success', {
                     position: toast.POSITION.TOP_RIGHT
                 })
+                fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
                 console.log(user)
                 event.target.reset()
                 navigate(from, { replace: true })
@@ -48,6 +55,13 @@ const Login = () => {
                 toast.success('Login Success', {
                     position: toast.POSITION.TOP_RIGHT
                 })
+                fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(result.user)
+                })
                 navigate(from, { replace: true })
             })
             .catch(error => {
@@ -61,6 +75,13 @@ const Login = () => {
                 console.log(result.user)
                 toast.success('Login Success', {
                     position: toast.POSITION.TOP_RIGHT
+                })
+                fetch('http://localhost:3000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(result.user)
                 })
                 navigate(from, { replace: true })
             })

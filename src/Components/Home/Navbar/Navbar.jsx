@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
@@ -58,8 +57,8 @@ const Navbar = () => {
 
     console.log(currentUser)
     return (
-        <div className='relative'>
-            <div className='w-[94%] md:w-[65%] mx-auto fixed md:top-10 top-5 left-0 right-0 z-10'>
+        <div className=''>
+            <div className='w-full mx-auto'>
                 <div className='md:flex md:justify-between items-center bg-black px-6 py-8'>
                     <div className='hidden md:inline-block'>
                         <div className='flex items-center text-[15px]'>
@@ -108,8 +107,9 @@ const Navbar = () => {
                                 <li className="uppercase "><Link to="about">about</Link></li>
                                 <li className="uppercase "><Link>package</Link></li>
                                 {
-                                    currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
+                                    // currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
                                 }
+                                <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
                             </ul>
 
 
@@ -150,35 +150,13 @@ const Navbar = () => {
                         <li className="uppercase hover:text-yellow-400"><Link to="/about">about</Link></li>
                         <li className="uppercase hover:text-yellow-400"><Link>package</Link></li>
                         {
-                            currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
+                            // currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
                         }
+                        <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
                     </ul>
                 )}
             </div>
 
-            <Carousel className='text-center' showArrows={true}>
-                <div className='relative'>
-                    <img src="image1.jpg" />
-                    <div className='absolute md:bottom-96 bottom-14 left-0 right-0 z-10 text-white'>
-                        <p className='font-bold md:text-[1.7rem] text-[1.5rem] sm:mx-4'>Solution for The Hajj and Umrah</p>
-                        <button className='uppercase text-[13px] text-black bg-yellow-300 px-5 py-3 rounded-3xl'>apply now</button>
-                    </div>
-                </div>
-                <div className='relative'>
-                    <img src="image11.jpg" />
-                    <div className='absolute md:bottom-96 bottom-14 left-0 right-0 z-10 text-white'>
-                        <p className='font-bold md:text-[1.7rem] text-[1.5rem] sm:mx-4'>Solution for The Hajj and Umrah</p>
-                        <button className='uppercase text-[13px] text-black bg-yellow-300 px-5 py-3 rounded-3xl'>apply now</button>
-                    </div>
-                </div>
-                <div className='relative'>
-                    <img src="image4.jpg" />
-                    <div className='absolute md:bottom-96 bottom-14 left-0 right-0 z-10 text-white'>
-                        <p className='font-bold md:text-[1.7rem] text-[1.5rem] sm:mx-4'>Solution for The Hajj and Umrah</p>
-                        <button className='uppercase text-[13px] text-black bg-yellow-300 px-5 py-3 rounded-3xl'>apply now</button>
-                    </div>
-                </div>
-            </Carousel>
             <ToastContainer />
         </div>
     );

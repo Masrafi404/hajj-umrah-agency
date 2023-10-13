@@ -6,10 +6,12 @@ import Blog from '../Blog/Blog';
 import HajjUmrah from '../HajjUmrah/HajjUmrah';
 import PersonPackage from '../PersonPckage/PersonPackage';
 import Slider from '../Slider/Slider';
+import Carusel from '../Navbar/Carusel';
 
 const Main = () => {
     return (
         <div>
+            <Carusel />
             <Slider />
             <SpecialPackage />
             <Offer />

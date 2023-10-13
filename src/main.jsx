@@ -14,6 +14,7 @@ import Login from './Components/User/Login/Login.jsx';
 import AuthProvider from './Components/Provider/AuthProvider.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import Users from './Components/Users/Users.jsx';
+import Dynamic from './Components/Dynamic/Dynamic.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
           {
             path: '/dashboard/users',
             element: <Users />
+          },
+          {
+            path: '/dashboard/dynamic-content',
+            element: <Dynamic />
           }
         ]
       }

@@ -9,9 +9,22 @@ AOS.init();
 const About = () => {
     const [isOpen, setIsOpen] = useState(false);
 
+    const [info, setInfo] = useState([]);
     const handleToggle = () => {
         setIsOpen(!isOpen);
     };
+
+    fetch('http://localhost:3000/personal')
+        .then((res) => res.json())
+        .then((data) => {
+            setInfo(data);
+            console.log(data)
+        })
+        .catch((error) => {
+            console.error('Error fetching users:', error);
+        });
+
+
     return (
         <div className=''>
             <div className=''>
@@ -85,47 +98,54 @@ const About = () => {
                     </ul>
                 )}
             </div>
-            <div className="bg-[#000] pb-7 pt-16">
+            {
+                info?.map(dt => <div key={dt._id} className="bg-[#000] pb-7 pt-16">
 
-                <section>
-                    <div className="md:flex items-center md:justify-center md:mx-32">
-                        <div className="">
-                            <img data-aos="zoom-in-up" className="w-[850px] rounded" src="profile.jpg" alt="" />
-                        </div>
-                        <div
-                            data-aos="fade-down"
-                            data-aos-easing="linear"
-                            data-aos-duration="1000"
-                            className="mx-10 text-white">
-                            <h1 className='text-[25px] font-medium mt-4'>Hello it's<span className='text-yellow-400 ms-2'>Me</span></h1>
-                            <h3 className='text-[30px]'>Redowanul Islam Khokan.</h3>
-                            <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit rem? Fugiat soluta esse eos tempora quia aspernatur! Omnis, quam.</p>
-                            <div className='mt-2'>
-                                <Link to="https://www.facebook.com/profile.php?id=100095284788408">
-                                    <button className="bg-black text-yellow-300 border-yellow-300 border-2 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                                        <i className="fa fa-facebook"></i>
-                                    </button>
-                                </Link>
+                    <section>
+                        <div className="md:flex items-center md:justify-center md:mx-32">
+                            <div className="">
+                                <img data-aos="zoom-in-up" className="w-[850px] rounded" src={dt?.imageURL || 'profile.jpg'} alt="" />
+                            </div>
+                            <div
+                                data-aos="fade-down"
+                                data-aos-easing="linear"
+                                data-aos-duration="1000"
+                                className="mx-10 text-white">
+                                <h1 className='text-[25px] font-medium mt-4'>Hello it's<span className='text-yellow-400 ms-2'>Me</span></h1>
+                                <h3 className='text-[30px]'> {dt?.name || 'Redowanul Islam Khokan'}</h3>
+                                <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit rem? Fugiat soluta esse eos tempora quia aspernatur! Omnis, quam.</p>
+                                <div className='mt-2'>
+                                    <a target='_blank' href={dt?.facebook || 'https://www.facebook.com/profile.php?id=100095284788408'} rel="noreferrer">
+                                        <button className="bg-black text-yellow-300 border-yellow-300 border-2 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                                            <i className="fa fa-facebook"></i>
+                                        </button>
+                                    </a>
 
-                                <button className="bg-black text-yellow-300 border-yellow-300 border-2 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
-                                    <i className="fa fa-whatsapp"></i>
-                                </button>
+                                    <a target='_blank' href={dt?.whatsapp} rel="noreferrer">
+                                        <button className="bg-black text-yellow-300 border-yellow-300 border-2 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                                            <i className="fa fa-whatsapp"></i>
+                                        </button>
+                                    </a>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                <section
-                    data-aos="fade-zoom-in"
-                    data-aos-easing="ease-in-back"
-                    data-aos-delay="300"
-                    data-aos-offset="0"
-                    className='my-10 text-white'>
-                    <h1 className='text-[25px] font-medium text-center mb-3'>About<span className='text-yellow-400 ms-2'>Me</span></h1>
-                    <div className='md:mx-96 mx-8'>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente exercitationem quod, quis iure ea debitis dicta asperiores impedit, velit a reprehenderit error voluptate laborum nisi odio aperiam officia nihil repellendus voluptates numquam, ad aut. Voluptatum maxime atque odit temporibus praesentium dolorem officia, tempora, aut facere quis amet debitis officiis? Recusandae magni corporis id tempore sit cupiditate enim quis blanditiis dolorum nobis quam reiciendis sunt animi necessitatibus ratione error excepturi delectus quo repellat vel vero, quod amet! Quasi dolorum dolor enim unde ipsa at nesciunt laborum, corrupti placeat quia voluptatum id deleniti, quibusdam autem suscipit officia tempora ad, totam minima voluptas.</p>
-                    </div>
-                </section>
-            </div>
+                    </section>
+                    <section
+                        data-aos="fade-zoom-in"
+                        data-aos-easing="ease-in-back"
+                        data-aos-delay="300"
+                        data-aos-offset="0"
+                        className='my-10 text-white'>
+                        <h1 className='text-[25px] font-medium text-center mb-3'>About<span className='text-yellow-400 ms-2'>Me</span></h1>
+                        <div className='md:mx-96 mx-8'>
+                            <p>
+                                {dt?.about || 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod repellat labore officia illum vero itaque dicta harum, sapiente tenetur omnis recusandae officiis veritatis doloribus quis non repellendus dolore, reiciendis fugiat minus, esse in ratione? Voluptatem officiis ad odio quos doloremque totam placeat sed, eveniet, in asperiores error, commodi suscipit veniam iure consectetur sint nam tempora deserunt accusantium vitae fugit architecto. Doloremque earum veritatis distinctio assumenda reprehenderit nihil velit eos neque repudiandae sequi! Iste deserunt adipisci facilis nam expedita porro sit sequi facere consequatur, nostrum qui corrupti dicta beatae nisi provident veritatis dolorum illo quia impedit necessitatibus delectus quasi molestias quaerat!'}
+                            </p>
+                        </div>
+                    </section>
+                </div>)
+            }
             <footer className="relative bg-black pt-8 pb-6 border-t-2">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-wrap text-left lg:text-left">

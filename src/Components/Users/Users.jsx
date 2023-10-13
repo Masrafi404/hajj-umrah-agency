@@ -3,6 +3,7 @@ import Swal from 'sweetalert2'; // Assuming you are using SweetAlert2 for notifi
 
 const Users = () => {
     const [users, setUsers] = useState([]);
+    const [data, setData] = useState([]);
 
     useEffect(() => {
         fetchUsers();
@@ -75,10 +76,45 @@ const Users = () => {
             });
     };
 
+    const filterEmailHandler = e => {
+        e.preventDefault()
+        const Email = e.target.email.value;
+        console.log(Email)
+        fetch('http://localhost:3000/users')
+            .then((res) => res.json())
+            .then((data) => setData(data))
+
+        const filterData = data.filter((user) => user.email.includes(Email));
+        setUsers(filterData)
+    }
+
     return (
         <div>
             <div className="p-5 h-screen bg-gray-100">
-                <h1 className="text-xl mb-2">All User</h1>
+
+                <div className='flex justify-between mb-4'>
+                    <div>
+                        <h1 className="text-xl">All User</h1>
+                    </div>
+                    <div className="relative flex items-center h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+                        <div className="grid place-items-center h-full w-12 text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+
+                        <form onSubmit={filterEmailHandler}>
+                            <input
+
+                                className="peer h-full outline-none text-sm text-gray-700 pr-2"
+                                type="text"
+                                id="search"
+                                name="email"
+                                placeholder="Search Email" />
+                            <input className="px-3 py-2 font-medium bg-blue-100 hover:bg-blue-200 hover:text-blue-600 text-blue-500 rounded-lg text-sm me-2 " type="submit" value="Search" />
+                        </form>
+                    </div>
+                </div>
 
                 <div className="overflow-auto rounded-lg shadow hidden md:block">
                     <table className="w-full">

@@ -10,7 +10,7 @@ const Dashboard = () => {
     return (
         <div className="flex">
             <div
-                className={` ${open ? "w-72" : "w-20"} bg-[#301934] h-screen p-5 pt-8 relative duration-300`}
+                className={` ${open ? "w-72" : "w-20"} bg-[#301934] h-auto p-5 pt-8 duration-300`}
             >
                 <img
                     src={controlImage}
@@ -29,7 +29,9 @@ const Dashboard = () => {
                 <ul className="pt-6">
                     {/* Manual menu items */}
                     <li className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4`}>
-                        <img src={userImage} />
+                        <Link to="/dashboard/users">
+                            <img src={userImage} />
+                        </Link>
                         <Link to="/dashboard/users">
                             <span className={`${!open && "hidden"} origin-left duration-200`}>
                                 Users
@@ -37,14 +39,18 @@ const Dashboard = () => {
                         </Link>
                     </li>
                     <li className={`flex rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 mt-2`}>
-                        <img src={userImage} />
-                        <span className={`${!open && "hidden"} origin-left duration-200`}>
-                            Inbox
-                        </span>
+                        <Link to="/dashboard/dynamic-content">
+                            <img src={userImage} />
+                        </Link>
+                        <Link to="/dashboard/dynamic-content">
+                            <span className={`${!open && "hidden"} origin-left duration-200`}>
+                                Dynamic Content
+                            </span>
+                        </Link>
                     </li>
                 </ul>
             </div>
-            <div className="h-screen flex-1 p-7">
+            <div className="h-auto flex-1 p-7">
                 <Outlet />
             </div>
         </div>

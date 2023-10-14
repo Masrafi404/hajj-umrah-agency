@@ -4,7 +4,6 @@ import ContactInfo from './ContactInfo';
 import Slider from './Slider';
 import Hajj from './Hajj';
 import Umrah from './Umrah';
-import HajjPlus from './HajjPlus';
 
 const Dynamic = () => {
     return (
@@ -14,7 +13,6 @@ const Dynamic = () => {
             <Slider />
             <Hajj />
             <Umrah />
-            <HajjPlus />
         </div>
     );
 };

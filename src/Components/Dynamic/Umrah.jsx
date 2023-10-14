@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const Umrah = () => {
 
@@ -24,6 +25,15 @@ const Umrah = () => {
             },
             body: JSON.stringify(personalInfo),
         });
+
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Umrah information successfully update',
+            showConfirmButton: false,
+            timer: 1500,
+        });
+        form.reset()
     }
 
     return (

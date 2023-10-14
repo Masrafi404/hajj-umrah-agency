@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const Slider = () => {
 
@@ -22,6 +23,15 @@ const Slider = () => {
             },
             body: JSON.stringify(imageInfo),
         });
+
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Slider information successfully update',
+            showConfirmButton: false,
+            timer: 1500,
+        });
+        form.reset()
     }
 
     return (

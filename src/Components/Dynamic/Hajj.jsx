@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const Hajj = () => {
 
@@ -24,6 +25,15 @@ const Hajj = () => {
             },
             body: JSON.stringify(personalInfo),
         });
+
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Hajj information successfully update',
+            showConfirmButton: false,
+            timer: 1500,
+        });
+        form.reset()
     }
 
     return (

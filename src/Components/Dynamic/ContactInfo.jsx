@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const ContactInfo = () => {
 
@@ -22,6 +23,14 @@ const ContactInfo = () => {
             },
             body: JSON.stringify(contactInfo),
         });
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'personal information successfully update',
+            showConfirmButton: false,
+            timer: 1500,
+        });
+        form.reset()
     }
 
     return (

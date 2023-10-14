@@ -56,6 +56,10 @@ const Navbar = () => {
     const currentUser = users.find(userData => userData?.email === user?.email);
 
     console.log(currentUser)
+
+
+
+
     return (
         <div className=''>
             <div className='w-full mx-auto'>

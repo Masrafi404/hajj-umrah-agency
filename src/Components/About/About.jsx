@@ -3,26 +3,28 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 // ..
 AOS.init();
 
 const About = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const [info, setInfo] = useState([]);
     const handleToggle = () => {
         setIsOpen(!isOpen);
-    };
+    }; const [info, setInfo] = useState([]);
 
-    fetch('http://localhost:3000/personal')
-        .then((res) => res.json())
-        .then((data) => {
-            setInfo(data);
-            console.log(data)
-        })
-        .catch((error) => {
-            console.error('Error fetching users:', error);
-        });
+    useEffect(() => {
+        fetch('http://localhost:3000/personal')
+            .then((res) => res.json())
+            .then((data) => {
+                setInfo(data);
+                console.log(data)
+            })
+            .catch((error) => {
+                console.error('Error fetching users:', error);
+            });
+    }, [])
 
 
     return (

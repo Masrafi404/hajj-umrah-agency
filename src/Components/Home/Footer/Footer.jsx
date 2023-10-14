@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
-import moment from 'moment/moment';
+import moment from 'moment';
 
 
 const Footer = () => {
+
+
+    const [info, setInfo] = useState([]);
+    console.log(info)
+    useEffect(() => {
+        fetch('http://localhost:3000/contact')
+            .then((res) => res.json())
+            .then((data) => {
+                setInfo(data);
+            })
+            .catch((error) => {
+                console.error('Error fetching contact info:', error);
+            });
+    }, []);
+
+
     return (
         <footer className="relative bg-black pt-8 pb-6">
             <div className="container mx-auto px-4">
@@ -29,34 +45,56 @@ const Footer = () => {
                             <button className="bg-black text-yellow-300 border-yellow-300 border shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                 <i className="fa fa-instagram"></i>
                             </button>
-                            <Link to="https://github.com/Masrafi404/hajj-umrah-agency">
+                            <Link to="https://github.com/Masrafi404/hajj-umrah-agency" target="_blank">
                                 <button className="bg-black text-yellow-300 border-yellow-300 border shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                     <i className="fa fa-github"></i>
                                 </button>
                             </Link>
+
                         </div>
                     </div>
                     <div className="w-full lg:w-8/12 px-2">
                         <div className="flex flex-wrap items-top mb-6">
                             <div className="w-full lg:w-3/12 px-4 ml-auto">
                                 <span className="block uppercase hover:text-yellow-300 text-white text-base font-semibold mb-2">Contact Info</span>
-                                <ul className="list-unstyled">
-                                    <li>
-                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm ">+8801811161863</a>
-                                    </li>
-                                    <li>
-                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">+8801976142447</a>
-                                    </li>
-                                    <li>
-                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">+8801976142440</a>
-                                    </li>
-                                    <li>
-                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block text-sm mb-3">jananitravelagency46@gmail.com</a>
-                                    </li>
-                                    <li>
-                                        <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">mdkokhan831974@gmail.com</a>
-                                    </li>
-                                </ul>
+
+
+
+                                {
+                                    info?.map(dt => <ul key={dt._id}>
+                                        <li>
+                                            <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">
+                                                {dt.contact1}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">
+                                                {dt.contact2}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">
+                                                {dt.contact3}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">
+                                                {dt.contact4}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">
+                                                {dt.contact5}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a className="text-blue-100 hover:text-yellow-300 font-normal block pb-2 text-sm">
+                                                {dt.contact6}
+                                            </a>
+                                        </li>
+                                    </ul>)
+                                }
+
                             </div>
                             <div className="w-full lg:w-3/12 px-4 ml-auto">
                                 <span className="block uppercase hover:text-yellow-300 text-white text-base font-semibold mb-2">Useful Links</span>

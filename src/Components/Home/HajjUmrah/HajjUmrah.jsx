@@ -1,6 +1,22 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const HajjUmrah = () => {
+
+    const [info, setInfo] = useState([]);
+    console.log(info)
+    useEffect(() => {
+        fetch('http://localhost:3000/personal')
+            .then((res) => res.json())
+            .then((data) => {
+                setInfo(data);
+            })
+            .catch((error) => {
+                console.error('Error fetching contact info:', error);
+            });
+    }, []);
+
     return (
         <div className='my-16 md:flex md:mx-20 justify-center items-center'>
             <img className='md:me-20' src="hajj-umrah.png" alt="" />
@@ -12,38 +28,19 @@ const HajjUmrah = () => {
 
                 <div className='space-y-3'>
                     <div className=''>
-                        <div>
-                            <p className='text-[18px]'>Redowanul Islam Khokan</p>
-                            <div className='flex items-center'>
-                                <div className='me-2'>
-                                    <i className="fa fa-phone" aria-hidden="true"></i>
+                        {
+                            info?.map(dt =>
+                                <div key={dt._id}>
+                                    <p className='text-[18px]'>{dt.name || 'Redowanul Islam Khokan'}</p>
+                                    <div className='flex items-center'>
+                                        <div className='me-2'>
+                                            <i className="fa fa-phone" aria-hidden="true"></i>
+                                        </div>
+                                        <p className='me-2'>{dt.whatsapp || '01873831974'}</p>
+                                    </div>
                                 </div>
-                                <p className='me-2'>01873831974</p> -   <p className='ms-2'>01863192638</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className=''>
-                        <div>
-                            <p className='text-[18px]'>Shahedul Islam</p>
-                            <div className='flex items-center'>
-                                <div className='me-2'>
-                                    <i className="fa fa-phone" aria-hidden="true"></i>
-                                </div>
-                                <p>01647143829</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className=''>
-                        <div>
-                            <p className='text-[18px]'>Towhidul Islam</p>
-                            <div className='flex items-center'>
-                                <div className='me-2'>
-                                    <i className="fa fa-phone" aria-hidden="true"></i>
-                                </div>
-                                <p className='me-2'>01838142446</p> - <p className='ms-2'>01876251133</p>
-                            </div>
-
-                        </div>
+                            )
+                        }
                     </div>
                 </div>
 

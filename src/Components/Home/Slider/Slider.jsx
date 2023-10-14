@@ -4,21 +4,22 @@ import img2 from './slider2.jpg';
 import img3 from './slider3.jpg';
 import img4 from './slider4.jpg';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Slider = () => {
+    const [info, setInfo] = useState([]);
     const sliders = [
         {
-            url: img1,
+            url: info?.image1 || img1,
         },
         {
-            url: img2,
+            url: info?.image2 || img2,
         },
         {
-            url: img3,
+            url: info?.image3 || img3,
         },
         {
-            url: img4,
+            url: info?.image4 || img4,
         },
     ];
 
@@ -34,6 +35,18 @@ const Slider = () => {
         const newIndex = isLatestSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
     };
+
+    console.log(info)
+    useEffect(() => {
+        fetch('http://localhost:3000/slider')
+            .then((res) => res.json())
+            .then((data) => {
+                data.map(dt => setInfo(dt))
+            })
+            .catch((error) => {
+                console.error('Error fetching slider info:', error);
+            });
+    }, []);
 
     return (
         <div className="md:mt-10">

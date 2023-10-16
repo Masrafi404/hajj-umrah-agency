@@ -10,7 +10,7 @@ const Users = () => {
     }, []);
 
     const fetchUsers = () => {
-        fetch('http://localhost:3000/users')
+        fetch('https://assaignment-11-backend-server.vercel.app/users')
             .then((res) => res.json())
             .then((data) => {
                 setUsers(data);
@@ -21,7 +21,7 @@ const Users = () => {
     };
 
     const handlerMakeAdmin = id => {
-        fetch(`http://localhost:3000/users/admin/${id}`, {
+        fetch(`https://assaignment-11-backend-server.vercel.app/users/admin/${id}`, {
             method: 'PATCH',
         })
             .then((res) => res.json())
@@ -49,7 +49,7 @@ const Users = () => {
     };
 
     const handlerMakeUser = id => {
-        fetch(`http://localhost:3000/users/user/${id}`, {
+        fetch(`https://assaignment-11-backend-server.vercel.app/users/user/${id}`, {
             method: 'PATCH',
         })
             .then((res) => res.json())
@@ -80,7 +80,7 @@ const Users = () => {
         e.preventDefault()
         const Email = e.target.email.value;
         console.log(Email)
-        fetch('http://localhost:3000/users')
+        fetch('https://assaignment-11-backend-server.vercel.app/users')
             .then((res) => res.json())
             .then((data) => setData(data))
 
@@ -90,11 +90,11 @@ const Users = () => {
 
     return (
         <div>
-            <div className="p-5 h-screen bg-gray-100">
+            <div className="p-5 w-auto h-screen bg-gray-100">
 
-                <div className='flex justify-between mb-4'>
+                <div className='md:flex md:justify-between mb-4'>
                     <div>
-                        <h1 className="text-xl">All User</h1>
+                        <h1 className="text-xl text-center">All User</h1>
                     </div>
                     <div className="relative flex items-center h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
                         <div className="grid place-items-center h-full w-12 text-gray-300">
@@ -121,9 +121,9 @@ const Users = () => {
                         <thead className="bg-gray-50 border-b-2 border-gray-200">
                             <tr>
                                 <th className=" p-3 text-sm font-semibold tracking-wide text-left">No.</th>
-                                <th className=" p-3 text-sm font-semibold tracking-wide text-left">Image</th>
+                                <th className="hidden md:inline-block p-3 text-sm font-semibold tracking-wide text-left">Image</th>
                                 <th className="p-3 text-sm font-semibold tracking-wide text-left">Email</th>
-                                <th className=" p-3 text-sm font-semibold tracking-wide text-left">Name</th>
+                                <th className="hidden md:inline-block p-3 text-sm font-semibold tracking-wide text-left">Name</th>
                                 <th className=" p-3 text-sm font-semibold tracking-wide text-left">Role</th>
                             </tr>
                         </thead>
@@ -134,14 +134,14 @@ const Users = () => {
                                     <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                                         <a href="#" className="font-bold text-blue-500 hover:underline">{index + 1}</a>
                                     </td>
-                                    <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                                    <td className="p-3 text-sm hidden md:inline-block text-gray-700 whitespace-nowrap">
                                         <img className='w-12 h-12 rounded-full' src={user.photoURL} alt="" />
                                     </td>
                                     <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
                                         <span
                                             className="p-1.5 text-xs font-medium tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-50">{user.email}</span>
                                     </td>
-                                    <td className="p-3 text-sm text-gray-700 whitespace-nowrap">{user.displayName}</td>
+                                    <td className="hidden md:inline-block p-3 text-sm text-gray-700 whitespace-nowrap">{user.displayName}</td>
                                     <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
 
                                         {

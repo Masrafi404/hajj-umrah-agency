@@ -8,7 +8,7 @@ const PersonPackage = () => {
     console.log(hajj)
 
     useEffect(() => {
-        fetch('http://localhost:3000/hajj')
+        fetch('https://assaignment-11-backend-server.vercel.app/hajj')
             .then((res) => res.json())
             .then((data) => {
                 data.map(dt => setHajj(dt))
@@ -19,7 +19,7 @@ const PersonPackage = () => {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:3000/umrah')
+        fetch('https://assaignment-11-backend-server.vercel.app/umrah')
             .then((res) => res.json())
             .then((data) => {
                 data.map(dt => setUmrah(dt))

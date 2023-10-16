@@ -7,7 +7,7 @@ import Umrah from './Umrah';
 
 const Dynamic = () => {
     return (
-        <div className='md:grid md:grid-cols-3 flex'>
+        <div className='grid grid-cols-1 md:grid-cols-3'>
             <PersonalInfo />
             <ContactInfo />
             <Slider />

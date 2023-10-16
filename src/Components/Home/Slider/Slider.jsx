@@ -38,7 +38,7 @@ const Slider = () => {
 
     console.log(info)
     useEffect(() => {
-        fetch('http://localhost:3000/slider')
+        fetch('https://assaignment-11-backend-server.vercel.app/slider')
             .then((res) => res.json())
             .then((data) => {
                 data.map(dt => setInfo(dt))

@@ -3,6 +3,9 @@ import React from 'react';
 import ReactStars from "react-rating-stars-component";
 
 const SpecialPackage = () => {
+
+    const [showModal, setShowModal] = React.useState(false);
+
     return (
         <div className='w-[96%] mx-auto mt-8'>
             <p className='uppercase font-semibold text-[.7rem] sm:text-[1rem] text-center text-yellow-400'>special offer</p>

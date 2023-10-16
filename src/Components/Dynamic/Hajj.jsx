@@ -18,7 +18,7 @@ const Hajj = () => {
 
         const personalInfo = { Hajj1, Hajj2, Hajj3, Hajj4, Hajj5, Hajj6, Hajj7, Hajj8 };
 
-        fetch('http://localhost:3000/hajj', {
+        fetch('https://assaignment-11-backend-server.vercel.app/hajj', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

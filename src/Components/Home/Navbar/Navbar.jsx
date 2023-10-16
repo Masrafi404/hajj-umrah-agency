@@ -46,7 +46,7 @@ const Navbar = () => {
         window.googleTranslateElementInit = googleTranslateElementInit;
 
         // Fetch user data here within the useEffect
-        fetch('http://localhost:3000/users')
+        fetch('https://assaignment-11-backend-server.vercel.app/users')
             .then((res) => res.json())
             .then((data) => {
                 setUsers(data);
@@ -111,9 +111,8 @@ const Navbar = () => {
                                 <li className="uppercase "><Link to="about">about</Link></li>
                                 <li className="uppercase "><Link>package</Link></li>
                                 {
-                                    // currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
+                                    currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
                                 }
-                                <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
                             </ul>
 
 
@@ -154,9 +153,8 @@ const Navbar = () => {
                         <li className="uppercase hover:text-yellow-400"><Link to="/about">about</Link></li>
                         <li className="uppercase hover:text-yellow-400"><Link>package</Link></li>
                         {
-                            // currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
+                            currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
                         }
-                        <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
                     </ul>
                 )}
             </div>

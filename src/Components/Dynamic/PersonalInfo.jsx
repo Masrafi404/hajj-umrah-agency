@@ -15,7 +15,7 @@ const PersonalInfo = () => {
 
         const personalInfo = { name, facebook, whatsapp, about, imageURL, };
 
-        fetch('http://localhost:3000/personal', {
+        fetch('https://assaignment-11-backend-server.vercel.app/personal', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

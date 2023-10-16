@@ -16,7 +16,7 @@ const Slider = () => {
 
         const imageInfo = { image1, image2, image3, image4, image5, image6 };
 
-        fetch('http://localhost:3000/slider', {
+        fetch('https://assaignment-11-backend-server.vercel.app/slider', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

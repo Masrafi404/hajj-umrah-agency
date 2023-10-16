@@ -50,7 +50,7 @@ const SignUp = () => {
                     position: toast.POSITION.TOP_RIGHT
                 })
 
-                fetch('http://localhost:3000/users', {
+                fetch('https://assaignment-11-backend-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -76,7 +76,7 @@ const SignUp = () => {
                     position: toast.POSITION.TOP_RIGHT
                 })
 
-                fetch('http://localhost:3000/users', {
+                fetch('https://assaignment-11-backend-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -100,7 +100,7 @@ const SignUp = () => {
                     position: toast.POSITION.TOP_RIGHT
                 })
 
-                fetch('http://localhost:3000/users', {
+                fetch('https://assaignment-11-backend-server.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

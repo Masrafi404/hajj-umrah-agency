@@ -16,7 +16,7 @@ const ContactInfo = () => {
 
         const contactInfo = { contact1, contact2, contact3, contact4, contact5, contact6 };
 
-        fetch('http://localhost:3000/contact', {
+        fetch('https://assaignment-11-backend-server.vercel.app/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

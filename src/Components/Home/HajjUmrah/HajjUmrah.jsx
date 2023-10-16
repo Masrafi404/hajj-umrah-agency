@@ -7,7 +7,7 @@ const HajjUmrah = () => {
     const [info, setInfo] = useState([]);
     console.log(info)
     useEffect(() => {
-        fetch('http://localhost:3000/personal')
+        fetch('https://assaignment-11-backend-server.vercel.app/personal')
             .then((res) => res.json())
             .then((data) => {
                 setInfo(data);

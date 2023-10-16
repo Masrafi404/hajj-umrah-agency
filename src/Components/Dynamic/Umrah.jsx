@@ -18,7 +18,7 @@ const Umrah = () => {
 
         const personalInfo = { Umrah1, Umrah2, Umrah3, Umrah4, Umrah5, Umrah6, Umrah7, Umrah8 };
 
-        fetch('http://localhost:3000/umrah', {
+        fetch('https://assaignment-11-backend-server.vercel.app/umrah', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

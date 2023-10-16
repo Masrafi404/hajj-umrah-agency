@@ -10,7 +10,7 @@ const Footer = () => {
     const [info, setInfo] = useState([]);
     console.log(info)
     useEffect(() => {
-        fetch('http://localhost:3000/contact')
+        fetch('https://assaignment-11-backend-server.vercel.app/contact')
             .then((res) => res.json())
             .then((data) => {
                 setInfo(data);

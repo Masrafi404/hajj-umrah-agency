@@ -1,10 +1,13 @@
 import ProgressBar from '@ramonak/react-progress-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import ReactStars from "react-rating-stars-component";
+import Modal from '../../Modal/Modal';
 
 const SpecialPackage = () => {
 
-    const [showModal, setShowModal] = React.useState(false);
+
+    const [showModal, setShowModal] = useState(false)
+    const handleClose = () => setShowModal(false)
 
     return (
         <div className='w-[96%] mx-auto mt-8'>
@@ -49,7 +52,7 @@ const SpecialPackage = () => {
                             </div>
                             <div className='text-sm flex space-x-2 ms-2 mt-4'><p className='text-blue-800 font-[500]'>Price:</p> <del className='text-slate-500'>16.000USD</del> <p className='text-blue-800 font-semibold'>15.000USD</p></div>
                             <div className='mt-3 mb-4'>
-                                <button className='text-[10px] font-semibold bg-slate-200 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
+                                <button onClick={() => setShowModal(true)} className='text-[10px] font-semibold bg-slate-200 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
                                 <button className='text-[10px] font-semibold ms-4'>READ MORE</button>
                             </div>
                             <div className='border-t'>
@@ -106,7 +109,7 @@ const SpecialPackage = () => {
                             </div>
                             <div className='text-sm flex space-x-2 ms-2 mt-4'><p className='text-blue-800 font-[500]'>Price:</p> <del className='text-slate-500'>16.000USD</del> <p className='text-blue-800 font-semibold'>15.000USD</p></div>
                             <div className='mt-3 mb-4'>
-                                <button className='text-[10px] font-semibold bg-slate-200 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
+                                <button onClick={() => setShowModal(true)} className='text-[10px] font-semibold bg-slate-200 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
                                 <button className='text-[10px] font-semibold ms-4'>READ MORE</button>
                             </div>
                             <div className='border-t'>
@@ -163,7 +166,7 @@ const SpecialPackage = () => {
                             </div>
                             <div className='text-sm flex space-x-2 ms-2 mt-4'><p className='text-blue-800 font-[500]'>Price:</p> <del className='text-slate-500'>16.000USD</del> <p className='text-blue-800 font-semibold'>15.000USD</p></div>
                             <div className='mt-3 mb-4'>
-                                <button className='text-[10px] font-semibold bg-slate-200 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
+                                <button onClick={() => setShowModal(true)} className='text-[10px] font-semibold bg-slate-200 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
                                 <button className='text-[10px] font-semibold ms-4'>READ MORE</button>
                             </div>
                             <div className='border-t'>
@@ -184,7 +187,7 @@ const SpecialPackage = () => {
                     </div>
                 </div>
             </div>
-
+            <Modal onClose={handleClose} visible={showModal} />
         </div>
     );
 };

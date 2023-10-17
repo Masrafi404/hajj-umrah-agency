@@ -10,7 +10,7 @@ const Dashboard = () => {
     return (
         <div className="flex">
             <div
-                className={` ${open ? "md:w-72" : "md:w-20"} bg-[#301934] h-auto p-5 pt-8 duration-300`}
+                className={` ${open ? "md:w-72" : "md:w-20"} bg-[#301934] h-auto md:p-5 px-2 py-5 pt-8 duration-300`}
             >
                 <img
                     src={controlImage}

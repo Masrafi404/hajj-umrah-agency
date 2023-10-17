@@ -1,8 +1,13 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Modal from '../../Modal/Modal';
 
 const HajjUmrah = () => {
+
+
+    const [showModal, setShowModal] = useState(false)
+    const handleClose = () => setShowModal(false)
 
     const [info, setInfo] = useState([]);
     console.log(info)
@@ -47,10 +52,12 @@ const HajjUmrah = () => {
 
 
                 <div className='mt-3 mb-4'>
-                    <button className='text-[10px] font-semibold bg-slate-200 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
+                    <button onClick={() => setShowModal(true)} className='text-[10px] font-semibold bg-slate-200 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
                     <button className='text-[10px] font-semibold ms-4'>READ MORE</button>
                 </div>
             </div>
+
+            <Modal onClose={handleClose} visible={showModal} />
         </div>
     );
 };

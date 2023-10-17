@@ -148,12 +148,12 @@ const Navbar = () => {
 
                 </div>
                 {isOpen && (
-                    <ul className="text-black font-medium text-sm bg-white space-y-1 ps-3 py-2">
-                        <li className="uppercase hover:text-yellow-400"><Link>home</Link></li>
-                        <li className="uppercase hover:text-yellow-400"><Link to="/about">about</Link></li>
-                        <li className="uppercase hover:text-yellow-400"><Link>package</Link></li>
+                    <ul className="text-black font-medium text-sm bg-white space-y-1 py-2">
+                        <li className="uppercase border-b ps-3 hover:bg-yellow-400 hover:text-white"><Link>home</Link></li>
+                        <li className="uppercase border-b ps-3 hover:bg-yellow-400 hover:text-white"><Link to="/about">about</Link></li>
+                        <li className="uppercase ps-3 hover:bg-yellow-400 hover:text-white"><Link>package</Link></li>
                         {
-                            currentUser?.role === 'admin' && <li className="uppercase "><Link to="dashboard">Dashboard</Link></li>
+                            currentUser?.role === 'admin' && <li className="uppercase border-t ps-3"><Link to="dashboard">Dashboard</Link></li>
                         }
                     </ul>
                 )}

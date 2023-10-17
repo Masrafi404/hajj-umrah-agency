@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from '../../Modal/Modal';
 
 const Offer = () => {
+
+
+    const [showModal, setShowModal] = useState(false)
+    const handleClose = () => setShowModal(false)
+
     return (
         <div className='bg-gray-100 mt-8 ps-4 md:flex justify-evenly'>
             <div className='py-16 md:ms-20'>
@@ -84,13 +90,15 @@ const Offer = () => {
                     </div>
                 </div>
                 <div className='mt-3 mb-4'>
-                    <button className='text-[10px] font-semibold bg-yellow-400 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
+                    <button onClick={() => setShowModal(true)} className='text-[10px] font-semibold bg-yellow-400 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
                     <button className='text-[10px] font-semibold ms-4'>READ MORE</button>
                 </div>
             </div>
             <div className='ms-[19%] hidden md:inline-block'>
                 <img className='h-[32.3rem] w-[40rem] pe-20' src="image6.jpg" alt="" />
             </div>
+
+            <Modal onClose={handleClose} visible={showModal} />
         </div>
     );
 };

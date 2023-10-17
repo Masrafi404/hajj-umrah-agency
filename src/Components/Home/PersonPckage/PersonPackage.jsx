@@ -1,11 +1,16 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Modal from '../../Modal/Modal';
 
 const PersonPackage = () => {
 
     const [hajj, setHajj] = useState([]);
     const [umrah, setUmrah] = useState([]);
-    console.log(hajj)
+
+
+
+    const [showModal, setShowModal] = useState(false)
+    const handleClose = () => setShowModal(false)
 
     useEffect(() => {
         fetch('https://assaignment-11-backend-server.vercel.app/hajj')
@@ -38,7 +43,7 @@ const PersonPackage = () => {
                     <div className='bg-yellow-500 ps-4 pt-4 pb-9 relative'>
                         <h3 className='font-medium'>Hajj</h3>
                         <p className='text-[13px] text-black'>$8000 USD</p>
-                        <button className='uppercase text-[10px] font-medium text-yellow-400 bg-black px-4 py-3 rounded absolute -bottom-5'>get stared</button>
+                        <button onClick={() => setShowModal(true)} className='uppercase text-[10px] font-medium text-yellow-400 bg-black px-4 py-3 rounded absolute -bottom-5'>get stared</button>
                     </div>
                     <div className='md:space-y-5 space-y-2 pb-5'>
 
@@ -137,7 +142,7 @@ const PersonPackage = () => {
                     <div className='bg-black ps-4 pt-4 pb-9 relative'>
                         <h3 className='font-medium text-white'>Umrah</h3>
                         <p className='text-[13px] text-yellow-400'>$8000 USD</p>
-                        <button className='uppercase text-[10px] font-medium text-yellow-400 bg-slate-200 px-4 py-3 rounded absolute -bottom-5'>get stared</button>
+                        <button onClick={() => setShowModal(true)} className='uppercase text-[10px] font-medium text-yellow-400 bg-slate-200 px-4 py-3 rounded absolute -bottom-5'>get stared</button>
                     </div>
                     <div className='md:space-y-5 space-y-2 pb-5'>
                         <div className='flex items-center ms-4 mt-10'>
@@ -231,6 +236,8 @@ const PersonPackage = () => {
                     </div>
                 </div>
             </div>
+
+            <Modal onClose={handleClose} visible={showModal} />
         </div>
     );
 };

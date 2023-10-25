@@ -39,7 +39,7 @@ const About = () => {
                                 className="mx-10 text-white">
                                 <h1 className='text-[25px] font-medium mt-4'>Hello it's<span className='text-yellow-400 ms-2'>Me</span></h1>
                                 <h3 className='text-[30px]'> {dt?.name || 'Redowanul Islam Khokan'}</h3>
-                                <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, reprehenderit rem? Fugiat soluta esse eos tempora quia aspernatur! Omnis, quam.</p>
+                                <p className=''>I'm a Businessman, Social Worker and Legal Practitioner</p>
                                 <div className='mt-2'>
                                     <a target='_blank' href={dt?.facebook || 'https://www.facebook.com/profile.php?id=100095284788408'} rel="noreferrer">
                                         <button className="bg-black text-yellow-300 border-yellow-300 border-2 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">

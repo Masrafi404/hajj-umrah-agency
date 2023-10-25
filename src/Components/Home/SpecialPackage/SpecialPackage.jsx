@@ -14,7 +14,7 @@ const SpecialPackage = () => {
             <p className='uppercase font-semibold text-[.7rem] sm:text-[1rem] text-center text-yellow-400'>special offer</p>
             <p className='font-bold md:text-[1.7rem] text-[1.5rem] sm:mx-4 text-center'>Solution for The Hajj and Umrah</p>
 
-            <div className='md:flex justify-center space-x-4 space-y-4 md:space-y-0 mt-3'>
+            <div className='lg:flex justify-center space-x-4 space-y-4 md:space-y-0 mt-3'>
                 <div className='border rounded'>
                     <img className='' src="image3.jpg" alt="" />
                     <h2 className='ms-2 mt-3 mb-2 text-lg font-[500]'>Hajj Package</h2>
@@ -130,7 +130,7 @@ const SpecialPackage = () => {
                     </div>
                 </div>
                 <div className='border rounded'>
-                    <img className='h-[46.4%] w-[100%]' src="image4.jpg" alt="" />
+                    <img className='md:h-[46.4%] lg:h-auto w-[100%]' src="image4.jpg" alt="" />
                     <h2 className='ms-2 mt-3 mb-2 text-lg font-[500]'>Ramadan Package</h2>
                     <div>
                         <div>

@@ -93,10 +93,10 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-yellow-400'>
+                <div className='bg-yellow-400 px-2'>
 
-                    <div className={user ? 'flex justify-between md:mx-4 items-center py-1' : 'flex justify-between md:mx-4 items-center py-4'}>
-                        <div>
+                    <div className={user ? 'flex justify-between md:mx-4 items-center py-1' : 'flex md:justify-between md:mx-4 items-center py-4'}>
+                        <div className='me-auto hidden md:inline-block'>
                             {user ? (
                                 user.photoURL ? (
                                     <img title={user.displayName} className="w-16 h-16 rounded-full me-4 " src={user?.photoURL} alt="" />
@@ -105,7 +105,7 @@ const Navbar = () => {
                                 )
                             ) : null}
                         </div>
-                        <div>
+                        <div className='me-auto'>
                             <ul className="text-black mt-[0.60rem] mb-[6px] font-medium md:flex justify-evenly space-x-3 text-sm mx-30% hidden sm:flex mx-[30%]">
                                 <li className="uppercase "><Link>home</Link></li>
                                 <li className="uppercase "><Link to="about">about</Link></li>
@@ -116,7 +116,7 @@ const Navbar = () => {
                             </ul>
 
 
-                            <span className='inline-block sm:hidden'>
+                            <span className='inline-block sm:hidden me-2'>
                                 {isOpen ? (
                                     <svg onClick={handleToggle} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="cursor-pointer w-6 h-6">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -129,7 +129,7 @@ const Navbar = () => {
 
                             </span>
                         </div>
-                        <div className="hidden md:inline-block">
+                        <div className="md:py-0 py-4">
 
                             {user ? (
                                 <Link onClick={logOutHandler} className=" bg-black rounded-[50px] px-4 py-2 text-white" to="/">

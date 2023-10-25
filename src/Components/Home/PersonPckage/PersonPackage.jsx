@@ -38,8 +38,8 @@ const PersonPackage = () => {
         <div>
             <h3 className='text-[13px] uppercase font-medium text-yellow-400 text-center'>featured</h3>
             <h1 className='text-xl font-medium my-1 text-center'>Hajj and Umrah Packages</h1>
-            <div className='md:flex md:mx-20'>
-                <div className='md:w-[100%] md:mx-40 mx-4 border rounded mt-4'>
+            <div className='lg:flex lg:mx-20'>
+                <div className='lg:w-[100%] lg:mx-10 xl:mx-30 mx-4 border rounded mt-4'>
                     <div className='bg-yellow-500 ps-4 pt-4 pb-9 relative'>
                         <h3 className='font-medium'>Hajj</h3>
                         <p className='text-[13px] text-black'>$8000 USD</p>
@@ -138,7 +138,7 @@ const PersonPackage = () => {
 
                     </div>
                 </div>
-                <div className='md:w-[100%] md:mx-40 mx-4 border rounded mt-4'>
+                <div className='lg:w-[100%] lg:mx-10 xl:mx-30 mx-4 border rounded mt-4'>
                     <div className='bg-black ps-4 pt-4 pb-9 relative'>
                         <h3 className='font-medium text-white'>Umrah</h3>
                         <p className='text-[13px] text-yellow-400'>$8000 USD</p>

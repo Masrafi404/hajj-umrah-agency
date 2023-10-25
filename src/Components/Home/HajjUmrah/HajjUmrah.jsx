@@ -23,8 +23,8 @@ const HajjUmrah = () => {
     }, []);
 
     return (
-        <div className='my-16 md:flex md:mx-20 justify-center items-center'>
-            <img className='md:me-20' src="hajj-umrah.png" alt="" />
+        <div className='ms-[20%] my-16 lg:flex lg:mx-20 justify-center items-center'>
+            <img className='lg:me-10' src="hajj-umrah.png" alt="" />
             <div className='ms-4'>
                 <h3 className='text-[13px] uppercase font-medium text-yellow-300'>featured</h3>
                 <h1 className='text-xl font-medium my-2'>Hajj & Umrah Processing</h1>

@@ -94,7 +94,7 @@ const Offer = () => {
                     <button className='text-[10px] font-semibold ms-4'>READ MORE</button>
                 </div>
             </div>
-            <div className='ms-[19%] hidden md:inline-block'>
+            <div className='ms-[19%] hidden md:inline-block my-auto'>
                 <img className='h-[32.3rem] w-[40rem] pe-20' src="image6.jpg" alt="" />
             </div>
 

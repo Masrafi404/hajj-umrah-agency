@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-// ..
+import ReactWhatsapp from 'react-whatsapp';
+
 AOS.init();
 
 const About = () => {
@@ -45,12 +46,11 @@ const About = () => {
                                             <i className="fa fa-facebook"></i>
                                         </button>
                                     </a>
-
-                                    <a target='_blank' href={dt?.whatsapp} rel="noreferrer">
+                                    <ReactWhatsapp number={dt?.whatsapp} message="Assalamu Alikum">
                                         <button className="bg-black text-yellow-300 border-yellow-300 border-2 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                             <i className="fa fa-whatsapp"></i>
                                         </button>
-                                    </a>
+                                    </ReactWhatsapp>
 
                                 </div>
                             </div>

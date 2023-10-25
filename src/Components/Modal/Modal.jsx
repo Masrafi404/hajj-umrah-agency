@@ -23,7 +23,7 @@ const Modal = ({ visible, onClose }) => {
         event.target.reset()
         handleClose()
 
-        fetch('http://localhost:3000/apply', {
+        fetch('https://assaignment-11-backend-server.vercel.app/apply', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -40,8 +40,15 @@ const Modal = ({ visible, onClose }) => {
 
 
     }
+
+    const handleOnClose = (e) => {
+        if (e.target.id === "container") {
+            onClose();
+        }
+    }
+
     return (
-        <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
+        <div onClick={handleOnClose} id="container" className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
             <div className="bg-white rounded p-2 relative">
                 <form onSubmit={applyHandler} className=''>
                     <div className=" w-full border-opacity-50 pt-3">

@@ -95,7 +95,7 @@ const Navbar = () => {
                 </div>
                 <div className='bg-yellow-400 px-2'>
 
-                    <div className={user ? 'flex justify-between md:mx-4 items-center py-1' : 'flex md:justify-between md:mx-4 items-center py-4'}>
+                    <div className={user ? 'flex justify-between md:mx-4 items-center py-1' : 'flex md:justify-between md:mx-4 items-center py-3'}>
                         <div className='me-auto hidden md:inline-block'>
                             {user ? (
                                 user.photoURL ? (

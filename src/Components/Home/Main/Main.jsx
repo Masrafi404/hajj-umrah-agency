@@ -7,10 +7,11 @@ import HajjUmrah from '../HajjUmrah/HajjUmrah';
 import PersonPackage from '../PersonPckage/PersonPackage';
 import Slider from '../Slider/Slider';
 import Carusel from '../Navbar/Carusel';
+import Testimonials from '../../Testimonials/Testimonials';
 
 const Main = () => {
     return (
-        <div>
+        <div className=''>
             <Carusel />
             <Slider />
             <SpecialPackage />
@@ -18,6 +19,7 @@ const Main = () => {
             <HajjUmrah />
             <PersonPackage />
             <Discount />
+            <Testimonials />
             <Blog />
         </div>
     );

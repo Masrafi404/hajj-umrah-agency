@@ -36,8 +36,8 @@ const PersonPackage = () => {
 
     return (
         <div>
-            <h3 className='text-[13px] uppercase font-medium text-yellow-400 text-center'>featured</h3>
-            <h1 className='text-xl font-medium my-1 text-center'>Hajj and Umrah Packages</h1>
+            <h3 className='text-[1rem] uppercase font-medium text-yellow-400 text-center'>featured</h3>
+            <h1 className='text-2xl font-medium my-1 text-center'>Hajj and Umrah Packages</h1>
             <div className='lg:flex lg:mx-20'>
                 <div className='lg:w-[100%] lg:mx-10 xl:mx-30 mx-4 border rounded mt-4'>
                     <div className='bg-yellow-500 ps-4 pt-4 pb-9 relative'>
@@ -142,7 +142,7 @@ const PersonPackage = () => {
                     <div className='bg-black ps-4 pt-4 pb-9 relative'>
                         <h3 className='font-medium text-white'>Umrah</h3>
                         <p className='text-[13px] text-yellow-400'>$8000 USD</p>
-                        <button onClick={() => setShowModal(true)} className='uppercase text-[10px] font-medium text-yellow-400 bg-slate-200 px-4 py-3 rounded absolute -bottom-5'>get stared</button>
+                        <button onClick={() => setShowModal(true)} className='uppercase text-[10px] font-medium text-yellow-500 bg-slate-200 px-4 py-3 rounded absolute -bottom-5'>get stared</button>
                     </div>
                     <div className='md:space-y-5 space-y-2 pb-5'>
                         <div className='flex items-center ms-4 mt-10'>

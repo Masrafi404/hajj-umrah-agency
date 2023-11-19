@@ -10,8 +10,8 @@ const Offer = () => {
     return (
         <div className='bg-gray-100 mt-8 ps-4 md:flex justify-evenly'>
             <div className='py-16 md:ms-20'>
-                <h3 className='text-[13px] uppercase font-medium text-yellow-300'>featured</h3>
-                <h1 className='text-xl font-medium my-2'>What Do We Offer?</h1>
+                <h3 className='text-[1rem] uppercase font-medium text-yellow-400'>featured</h3>
+                <h1 className='text-2xl font-medium my-2'>What Do We Offer?</h1>
                 <div className='space-y-3'>
                     <div className='flex items-center'>
                         <div className='font-bold text-blue-600'>
@@ -90,8 +90,8 @@ const Offer = () => {
                     </div>
                 </div>
                 <div className='mt-3 mb-4'>
-                    <button onClick={() => setShowModal(true)} className='text-[10px] font-semibold bg-yellow-400 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
-                    <button className='text-[10px] font-semibold ms-4'>READ MORE</button>
+                    <button onClick={() => setShowModal(true)} className='text-[12px] font-medium bg-yellow-400 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
+                    <button className='text-[12px] font-medium ms-4'>READ MORE</button>
                 </div>
             </div>
             <div className='ms-[19%] hidden md:inline-block my-auto'>

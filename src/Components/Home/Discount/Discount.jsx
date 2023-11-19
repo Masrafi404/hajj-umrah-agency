@@ -5,8 +5,8 @@ const Discount = () => {
         <div className='bg-slate-200 py-8 mt-8 md:flex md:px-20 justify-evenly'>
             <div>
                 <div className='bg-yellow-500 mx-4 py-3 rounded-t-md'>
-                    <h2 className='text-center'>Apply Now</h2>
-                    <h1 className='text-center font-medium'>Up 10% Discount*</h1>
+                    <h2 className='text-center text-xl font-medium'>Apply Now</h2>
+                    <h1 className='text-center font-medium text-2xl'>Up 10% Discount</h1>
                 </div>
                 <div className='mx-4 pb-5 bg-white rounded-b-md md:px-20'>
                     <input className='mt-6 ps-3 text-[12px] border w-[90%] mx-4 rounded-2xl h-9' placeholder='First Name' type="text" name="" id="" />
@@ -14,13 +14,13 @@ const Discount = () => {
                     <input className='mt-5 ps-3 text-[12px] border w-[90%] mx-4 rounded-2xl h-9' placeholder='Email' type="text" name="" id="" />
                     <input className='mt-5 ps-3 text-[12px] border w-[90%] mx-4 rounded-2xl h-9' placeholder='Number' type="text" name="" id="" />
                     <div className='text-center mt-4'>
-                        <button className='text-[10px] font-semibold bg-slate-300 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
+                        <button className='text-[12px] font-medium bg-slate-300 py-4 px-4 rounded-3xl ms-2'>APPLY NOW</button>
                     </div>
                 </div>
             </div>
             <div className='md:ms-20 ms-6 md:w-[60%]'>
-                <h4 className='uppercase text-[10px] font-medium text-yellow-400 mt-3'>apply</h4>
-                <h1 className='font-medium mt-1 text-lg'>Apply your Hajj and Umrah</h1>
+                <h4 className='uppercase text-[1rem] font-medium text-yellow-400 mt-3'>apply now</h4>
+                <h1 className='font-medium mt-1 text-2xl'>Apply your Hajj and Umrah</h1>
                 <h1 className='font-medium'>and Get 10% Discount</h1>
                 <p className='text-sm mt-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <div className='space-y-2 mt-5 mb-1'>

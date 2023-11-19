@@ -50,7 +50,7 @@ const Slider = () => {
 
     return (
         <div className="md:mt-10">
-            <h1 className="text-center font-medium text-xl text-yellow-400">Our Service</h1>
+            <h1 className="text-center font-medium text-4xl text-yellow-400">Our Service</h1>
             <div className="md:px-4 relative w-[100%] md:h-[500px] h-[200px] md:max-w-[1400px] mt-5 mx-auto">
                 <div
                     style={{

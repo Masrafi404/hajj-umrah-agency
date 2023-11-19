@@ -6,8 +6,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* @media screen and (min-width: 600px) {
-    .translate-element {
-        display: none;
-    }
-} */
+.shadow-text {
+    text-shadow: black 12px -2px 20px;
+}

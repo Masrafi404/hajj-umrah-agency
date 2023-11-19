@@ -1,7 +1,11 @@
 import React from 'react';
+import ReactWhatsapp from 'react-whatsapp';
 import Swal from 'sweetalert2';
 
 const Modal = ({ visible, onClose }) => {
+
+
+
 
     const handleClose = () => {
         onClose()
@@ -22,6 +26,7 @@ const Modal = ({ visible, onClose }) => {
         console.log(apply)
         event.target.reset()
         handleClose()
+
 
         fetch('https://assaignment-11-backend-server.vercel.app/apply', {
             method: 'POST',

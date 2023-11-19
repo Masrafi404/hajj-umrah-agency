@@ -116,7 +116,7 @@ const Users = () => {
                     </div>
                 </div>
 
-                <div className="overflow-auto rounded-lg shadow hidden md:block">
+                <div className="rounded-lg">
                     <table className="w-full">
                         <thead className="bg-gray-50 border-b-2 border-gray-200">
                             <tr>
@@ -131,13 +131,13 @@ const Users = () => {
 
                             users?.map((user, index) => <tbody key={index} className="divide-y divide-gray-100">
                                 <tr className="bg-white">
-                                    <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                                    <td className="md:p-3 text-sm text-gray-700 whitespace-nowrap">
                                         <a href="#" className="font-bold text-blue-500 hover:underline">{index + 1}</a>
                                     </td>
-                                    <td className="p-3 text-sm hidden md:inline-block text-gray-700 whitespace-nowrap">
+                                    <td className="md:p-3 text-sm hidden md:inline-block text-gray-700 whitespace-nowrap">
                                         <img className='w-12 h-12 rounded-full' src={user.photoURL} alt="" />
                                     </td>
-                                    <td className="p-3 text-sm text-gray-700 whitespace-nowrap">
+                                    <td className="md:p-3 text-sm text-gray-700 whitespace-nowrap">
                                         <span
                                             className="p-1.5 text-xs font-medium tracking-wider text-green-800 bg-green-200 rounded-lg bg-opacity-50">{user.email}</span>
                                     </td>
@@ -146,24 +146,24 @@ const Users = () => {
 
                                         {
                                             user.role === 'user' ? <button disabled
-                                                className={`px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm ${user.role === 'user' ? 'hover:text-blue-500 hover:bg-blue-50 disabled:opacity-50 cursor-not-allowed' : ''}`}
+                                                className={`md:px-5 px-3 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm ${user.role === 'user' ? 'hover:text-blue-500 hover:bg-blue-50 disabled:opacity-50 cursor-not-allowed' : ''}`}
 
                                             >
                                                 User
                                             </button> :
-                                                <button onClick={() => handlerMakeUser(user._id)} className="px-5 py-2.5 font-medium bg-blue-100 hover:bg-blue-200 hover:text-blue-600 text-blue-500 rounded-lg text-sm">
+                                                <button onClick={() => handlerMakeUser(user._id)} className="md:px-5 px-3 py-2.5 font-medium bg-blue-100 hover:bg-blue-200 hover:text-blue-600 text-blue-500 rounded-lg text-sm">
                                                     Make User
                                                 </button>
                                         }
 
                                         {
                                             user.role === 'admin' ? <button disabled
-                                                className={`ms-4 px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm ${user.role === 'admin' ? 'hover:text-blue-500 hover:bg-blue-50 disabled:opacity-50 cursor-not-allowed' : ''}`}
+                                                className={`md:ms-4 ms-2 md:px-5 px-3 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm ${user.role === 'admin' ? 'hover:text-blue-500 hover:bg-blue-50 disabled:opacity-50 cursor-not-allowed' : ''}`}
 
                                             >
                                                 Admin
                                             </button> :
-                                                <button onClick={() => handlerMakeAdmin(user._id)} className="ms-4 px-5 py-2.5 font-medium bg-blue-100 hover:bg-blue-200 hover:text-blue-600 text-blue-500 rounded-lg text-sm">
+                                                <button onClick={() => handlerMakeAdmin(user._id)} className="md:ms-4 md-2 md:px-5 mx-3 py-2.5 font-medium bg-blue-100 hover:bg-blue-200 hover:text-blue-600 text-blue-500 rounded-lg text-sm">
                                                     Make Admin
                                                 </button>
                                         }

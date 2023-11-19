@@ -46,7 +46,7 @@ const About = () => {
                                             <i className="fa fa-facebook"></i>
                                         </button>
                                     </a>
-                                    <ReactWhatsapp number={dt?.whatsapp || "+8801873831974"} message="Assalamu Alikum">
+                                    <ReactWhatsapp number={dt?.whatsapp || "+8801873831974"} message="আসসালামু আলাইকুম, আমি জননি ট্রাভেল এজেন্সির সার্ভিস সম্পর্কে চানতে চাই৷">
                                         <button className="bg-black text-yellow-300 border-yellow-300 border-2 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
                                             <i className="fa fa-whatsapp"></i>
                                         </button>

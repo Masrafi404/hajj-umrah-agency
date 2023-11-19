@@ -17,7 +17,7 @@ const SpecialPackage = () => {
             <div className='lg:flex justify-center space-x-4 space-y-4 md:space-y-0 mt-3'>
                 <div className='border rounded'>
                     <div className='sticky'>
-                        <img className='' src="image3.jpg" alt="" />
+                        <img className='' src="image1.jpg" alt="" />
                         <div className='absolute top-2 right-2 ps-1 pe-2 py-1 bg-white border-s-8 border-yellow-400 rounded'>10% Discount</div>
                     </div>
                     <h2 className='ms-2 mt-3 mb-2 text-lg font-[500]'>Hajj Package</h2>

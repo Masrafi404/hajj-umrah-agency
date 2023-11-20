@@ -137,7 +137,7 @@ const SpecialPackage = () => {
                 </div>
                 <div className='border rounded '>
                     <div className='sticky'>
-                        <img className='md:h-[235px] w-[100%]' src="https://thumbs.dreamstime.com/b/dubai-marina-beauty-view-rooftop-showing-cityscape-boats-sea-view-51444879.jpg" alt="" />
+                        <img className='md:h-[235px] w-[100%]' src="dubai-marina-beauty-view-rooftop-showing-cityscape-boats-sea-view-51444879.webp" alt="" />
                         <div className='absolute top-2 right-2 ps-1 pe-2 py-1 bg-white border-s-8 border-yellow-400 rounded'>15% Discount</div>
                     </div>
                     <h2 className='ms-2 mt-3 mb-2 text-lg font-[500]'>Dubai Travel Package</h2>
